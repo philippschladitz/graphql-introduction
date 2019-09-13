@@ -1,0 +1,14 @@
+type Stock {
+    symbol: String
+    name: String
+    price: Float
+}
+
+input StockInput {
+    symbol: String
+}
+
+type Query {
+    allStocks: [Stock]!
+    stock(input: StockInput!): Stock
+}
