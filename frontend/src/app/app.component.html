@@ -19,3 +19,23 @@
     <span>{{ stock.price }}</span>
   </div>
 </div>
+
+<div>
+  <input type="text" [formControl]="searchFormControl">
+  <button (click)="search()">search</button>
+</div>
+
+<div *ngIf="searchResult">
+   <div>
+     <span style="margin-right: 4px">name</span>
+     <span>{{ searchResult.name }}</span>
+   </div>
+   <div>
+     <span style="margin-right: 4px">symbol</span>
+     <span>{{ searchResult.symbol }}</span>
+   </div>
+   <div>
+     <span style="margin-right: 4px">price</span>
+     <span>{{ searchResult.price }}</span>
+   </div>
+</div>
